@@ -1,8 +1,23 @@
+// ********************* HTML *********************************************
 // when the page opens, the date and time are displayed at the top
 // there are text areas where the user can type evens for the day
-//      there is a save button
 //      there is a section with the time
 //      there is a section with the text
+//      there is a save button
+
+var eventElement = $(".event-element").val();
+var time;
+
+// ********************** Keeping Time *************************************
+// set a the current time
+function updateTime() {
+    time = $(".time-date").text(moment().format('MMMM Do YYYY, h:mm a'));
+}
+updateTime();
+// current time updates each minute
+setInterval(function () {
+    updateTime();
+}, 60000);
 
 
 // ********************* Saving events in the scheduler *******************

@@ -1,0 +1,26 @@
+.width {
+    width: 90px;
+    text-align: center;
+}
+
+
+.header {
+    text-align: center;
+    margin: 20px;
+  font-family: 'Ribeye', cursive;
+    color: deepskyblue;
+    
+}
+
+.time-date {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.background {
+    background-image: url(../images/index-background.jpg);
+}
+
+.container {
+    font-family: 'IM Fell English SC', serif;
+}
