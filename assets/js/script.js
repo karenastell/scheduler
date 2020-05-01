@@ -12,14 +12,13 @@ var schedulerTimeElement;
 // ********************** Keeping Time *************************************
 // set a the current time
 function updateTime() {
-    $(".time-date").text(moment().format('MMMM Do YYYY, h:mm a'));
+  $(".time-date").text(moment().format("MMMM Do YYYY, h:mm a"));
 }
 updateTime();
 // current time updates each minute
 setInterval(function () {
-    updateTime();
+  updateTime();
 }, 60000);
-
 
 // ********************* Saving events in the scheduler *******************
 // when the save button is clicked the event is stored in local storage
@@ -37,42 +36,39 @@ var eighteen = $(".18").val();
 var ninteen = $(".19").val();
 
 function saveEvents() {
+  var eventsObject = {
+    nine: nine,
+    ten: ten,
+    eleven: eleven,
+    twelve: twelve,
+    thirteen: thirteen,
+    forteen: forteen,
+    fifteen: fifteen,
+    sixteen: sixteen,
+    seventeen: seventeen,
+    eighteen: eighteen,
+    ninteen: ninteen,
+  };
 
-    var eventsObject = {
-        9: nine,
-        10: ten,
-        11: eleven,
-        12: twelve,
-        13: thirteen,
-        14: forteen,
-        15: fifteen,
-        16: sixteen,
-        17: seventeen,
-        18: eighteen,
-        19: ninteen
-
-    }
-
-    var event = getEventsFromLS();
-    event.push(eventsObject);
-    var eventsJSON = JSON.stringify(event);
-    localStorage.setItem("event", eventsJSON);
-
+  var event = getEventsFromLS();
+  event.push(eventsObject);
+  var eventsJSON = JSON.stringify(event);
+  localStorage.setItem("event", eventsJSON);
+  //console.log("eventsObject.nine", eventsObject.nine);
 }
+
+saveEvents();
 
 function getEventsFromLS() {
-    event = localStorage.getItem("event");
-    if (event) {
-        return JSON.parse(event);
-    } else {
-        return [];
-    }
-
+  event = localStorage.getItem("event");
+  if (event) {
+    return JSON.parse(event);
+  } else {
+    return [];
+  }
 }
 
-
-
-
+// another data-save for the buttons?
 
 // *********************** Elapsed Time ***********************************
 // depending on the current time the text areas will change colors
@@ -80,25 +76,37 @@ function getEventsFromLS() {
 //       present = green
 //       future = blue
 
-
 //schedulerTimeElement = event.target;
 //schedulerTime = schedulerTimeElement.getAttribute("data-time");
 
-
 var currentTime = moment().toObject();
-var check = $(".time-date").text() === currentTime.hour;
-console.log("moment.toObject", moment().toObject);
-console.log("check", check);
+
+// gives current time from webpage display
 console.log("time-date", $(".time-date").text());
+
+// gives current hour from moment object
 console.log("currentTime.hours", currentTime.hours);
+
+// gives the current time/date information from moment in an object form
 console.log("moment to object", moment().toObject());
+
 var currentHour = currentTime.hours;
+console.log(currentHour);
 
-// var hourChecker = event.target;
-// var time = hourChecker.getAttribute("data-time");
-//console.log(time);
+var time;
+$(".hour").each(function () {
+  time = parseInt($(this).attr("id"));
+  console.log(time);
+  if (currentHour == time) {
+    $(this).addClass("present");
+    $(this).removeClass("future", "past");
+  } else if (currentHour > time) {
+    $(this).addClass("past");
+    $(this).removeClass("future", "present");
+  } else {
+    $(this).addClass("future");
+    $(this).removeClass("present", "past");
+  }
+});
 
-// if (currentHour)
-
-
-// currentTime.hours 
+// currentTime.hours

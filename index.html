@@ -1,143 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Schedule</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Ribeye&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="assets//images/icon.svg">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Ribeye&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets//images/icon.svg" />
+  </head>
 
-
-</head>
-
-<body class="background">
+  <body class="background">
     <header class="header">
-        <h1>Daily Schedule</h1>
-        <h2 class="time-date header-font"></h2>
+      <h1>Daily Schedule</h1>
+      <h2 class="time-date header-font"></h2>
     </header>
     <main class="container">
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element " id="inputGroup-sizing-lg">9:00</span>
-            </div>
-            <input type="text" class="form-control 9" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="9">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >9:00</span
+          >
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">10:00</span>
-            </div>
-            <input type="text" class="form-control 10" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="10">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+        <input
+          type="text"
+          class="form-control hour 9"
+          id="9"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="9"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">11:00</span>
-            </div>
-            <input type="text" class="form-control 11" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="11">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >10:00</span
+          >
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">12:00</span>
-            </div>
-            <input type="text" class="form-control 12" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="12">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+        <input
+          type="text"
+          class="form-control hour 10"
+          id="10"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="10"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">1:00</span>
-            </div>
-            <input type="text" class="form-control 13" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="13">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >11:00</span
+          >
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">2:00</span>
-            </div>
-            <input type="text" class="form-control 14" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="14">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+        <input
+          type="text"
+          class="form-control hour 11"
+          id="11"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="11"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">3:00</span>
-            </div>
-            <input type="text" class="form-control 15" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="15">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >12:00</span
+          >
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">4:00</span>
-            </div>
-            <input type="text" class="form-control 16" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="16">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+        <input
+          type="text"
+          class="form-control hour 12"
+          id="12"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="12"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">5:00</span>
-            </div>
-            <input type="text" class="form-control 17" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="17">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >1:00</span
+          >
         </div>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text width event-element" id="inputGroup-sizing-lg">6:00</span>
-            </div>
-            <input type="text" class="form-control 18" placeholder="Event" aria-label="Recipient's username"
-                aria-describedby="button-addon2" data-time="18">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
-            </div>
+        <input
+          type="text"
+          class="form-control hour 13"
+          id="13"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="13"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
         </div>
-
-
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >2:00</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control hour 14"
+          id="14"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="14"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >3:00</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control hour 15"
+          id="15"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="15"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >4:00</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control hour 16"
+          id="16"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="16"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >5:00</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control hour 16"
+          id="16"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="17"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text width event-element"
+            id="inputGroup-sizing-lg"
+            >6:00</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control hour 16"
+          id="16"
+          placeholder="Event"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          data-time="18"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Save
+          </button>
+        </div>
+      </div>
     </main>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/moment/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
