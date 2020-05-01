@@ -28,7 +28,7 @@ var ten = $(".10").val();
 var eleven = $(".11").val();
 var twelve = $(".12").val();
 var thirteen = $(".13").val();
-var forteen = $(".14").val();
+var fourteen = $(".14").val();
 var fifteen = $(".15").val();
 var sixteen = $(".16").val();
 var seventeen = $(".17").val();
@@ -42,7 +42,7 @@ function saveEvents() {
     eleven: eleven,
     twelve: twelve,
     thirteen: thirteen,
-    forteen: forteen,
+    fourteen: fourteen,
     fifteen: fifteen,
     sixteen: sixteen,
     seventeen: seventeen,
@@ -50,6 +50,7 @@ function saveEvents() {
     ninteen: ninteen,
   };
 
+  console.log(eventsObject);
   var event = getEventsFromLS();
   event.push(eventsObject);
   var eventsJSON = JSON.stringify(event);
@@ -71,42 +72,29 @@ function getEventsFromLS() {
 // another data-save for the buttons?
 
 // *********************** Elapsed Time ***********************************
-// depending on the current time the text areas will change colors
-//       past = grey
-//       present = green
-//       future = blue
-
-//schedulerTimeElement = event.target;
-//schedulerTime = schedulerTimeElement.getAttribute("data-time");
-
+// depending on the current time the text areas will change colors:
 var currentTime = moment().toObject();
-
-// gives current time from webpage display
-console.log("time-date", $(".time-date").text());
-
-// gives current hour from moment object
-console.log("currentTime.hours", currentTime.hours);
-
-// gives the current time/date information from moment in an object form
-console.log("moment to object", moment().toObject());
-
+// currentHour is the hour of the current moment - in military time
 var currentHour = currentTime.hours;
-console.log(currentHour);
-
 var time;
+
+// for each element with the class "hour"
 $(".hour").each(function () {
+  // make each id into an integer
   time = parseInt($(this).attr("id"));
-  console.log(time);
+  //   console.log(time);
+  // compare the current hour from the moment object to the hour that is displayed on the webpage
   if (currentHour == time) {
+    //present = green
     $(this).addClass("present");
     $(this).removeClass("future", "past");
   } else if (currentHour > time) {
+    //past = grey
     $(this).addClass("past");
     $(this).removeClass("future", "present");
   } else {
+    //future = blue
     $(this).addClass("future");
     $(this).removeClass("present", "past");
   }
 });
-
-// currentTime.hours

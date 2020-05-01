@@ -7,7 +7,12 @@
   text-align: center;
   margin: 20px;
   font-family: "Ribeye", cursive;
-  color: deepskyblue;
+  color: black;
+  text-decoration: underline;
+}
+
+.input-group {
+  border: 1px solid darkgrey;
 }
 
 .time-date {
@@ -16,7 +21,7 @@
 }
 
 .background {
-  background-image: url(../images/index-background.jpg);
+  background-image: url(../images/neutral-2852878_960_720.jpg);
 }
 
 .container {
@@ -24,7 +29,7 @@
 }
 
 .present {
-  background: lightgreen !important;
+  background: rgb(133, 201, 133) !important;
 }
 
 .future {
