@@ -3,6 +3,12 @@
   text-align: center;
 }
 
+.input-height {
+  height: 90px !important;
+}
+.padding-margin {
+  padding-bottom: 50px;
+}
 .header {
   text-align: center;
   margin: 20px;
@@ -30,6 +36,7 @@
 
 .present {
   background: rgb(133, 201, 133) !important;
+  border: 2px solid blue !important;
 }
 
 .future {

@@ -75,19 +75,26 @@ setInterval(function () {
 //     return [];
 //   }
 // }
-
+var storageKey;
 function saveEvents() {
+  // recognizes which button is clicked
   var saveBtnEl = $(this);
-  var storageKey = saveBtnEl.attr("data-time");
-  //var inputEl = $(".hour").val();
+  // sets the storage key to the data attribute
+  storageKey = saveBtnEl.attr("data-time");
+  // sets the value of the input to variable inputEl
   var inputEl = saveBtnEl.parent().siblings(".hour");
   console.log(inputEl.val());
+  // saves the input into local storage under the key
   localStorage.setItem(storageKey, inputEl.val());
+  getEventsFromLS();
+}
+
+function getEventsFromLS() {
+  localStorage.getItem(storageKey);
+  $(".hour").text(storageKey);
 }
 
 $(".btn").on("click", saveEvents);
-
-// another data-save for the buttons?
 
 // *********************** Elapsed Time ***********************************
 // depending on the current time the text areas will change colors:
