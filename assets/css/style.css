@@ -6,8 +6,13 @@
 .input-height {
   height: 90px !important;
 }
-.padding-margin {
+.padding {
   padding-bottom: 50px;
+}
+
+.margin {
+  margin: 30px;
+  text-align: center;
 }
 .header {
   text-align: center;
