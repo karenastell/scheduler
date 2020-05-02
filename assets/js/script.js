@@ -76,6 +76,8 @@ setInterval(function () {
 //   }
 // }
 var storageKey;
+
+getEventsFromLS();
 function saveEvents() {
   // recognizes which button is clicked
   var saveBtnEl = $(this);
@@ -83,16 +85,42 @@ function saveEvents() {
   storageKey = saveBtnEl.attr("data-time");
   // sets the value of the input to variable inputEl
   var inputEl = saveBtnEl.parent().siblings(".hour");
-  console.log(inputEl.val());
+  //console.log(inputEl.val());
   // saves the input into local storage under the key
   localStorage.setItem(storageKey, inputEl.val());
   getEventsFromLS();
 }
 
 function getEventsFromLS() {
-  localStorage.getItem(storageKey);
-  $(".hour").text(storageKey);
+  //   for (var i = 0; i < localStorage.length; i++) {
+  // gets each item in local storage by it's key
+  var inputEl9 = localStorage.getItem("9");
+  var inputEl10 = localStorage.getItem("10");
+  var inputEl11 = localStorage.getItem("11");
+  var inputEl12 = localStorage.getItem("12");
+  var inputEl13 = localStorage.getItem("13");
+  var inputEl14 = localStorage.getItem("14");
+  var inputEl15 = localStorage.getItem("15");
+  var inputEl16 = localStorage.getItem("16");
+  var inputEl17 = localStorage.getItem("17");
+  var inputEl18 = localStorage.getItem("18");
+
+  // sets each textarea to the correct local storage text
+  $(".9").text(inputEl9);
+  $(".10").text(inputEl10);
+  $(".11").text(inputEl11);
+  $(".12").text(inputEl12);
+  $(".13").text(inputEl13);
+  $(".14").text(inputEl14);
+  $(".15").text(inputEl15);
+  $(".16").text(inputEl16);
+  $(".17").text(inputEl17);
+  $(".18").text(inputEl18);
+
+  //   localStorage.getItem(storageKey);
+  //   $(".hour").text(storageKey);
 }
+console.log(localStorage);
 
 $(".btn").on("click", saveEvents);
 
